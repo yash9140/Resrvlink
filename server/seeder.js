@@ -24,7 +24,7 @@ const adminUser = {
 
 const seed = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, { family: 4 });
+    await mongoose.connect(process.env.MONGODB_URI);
     logger.info('Connected to MongoDB for seeding');
 
     await Table.deleteMany({});
